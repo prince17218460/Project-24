@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jira Style Task Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎯 Task Board</h1>
+      <div class="stats">
+        <span class="stat-item"><span class="stat-number" id="todoCount">0</span> To Do</span>
+        <span class="stat-item"><span class="stat-number" id="doneCount">0</span> Done</span>
+        <span class="stat-item"><span class="stat-number" id="hoursCount">0</span> Hours</span>
+      </div>
+    </div>
+
+    <div class="input-box">
+      <input id="taskInput" placeholder="What needs to be done?" />
+      <select id="priority">
+        <option value="high">High</option>
+        <option value="medium" selected>Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <button id="addBtn">Create Task</button>
+    </div>
+
+    <div class="columns">
+      <div class="column" id="todoColumn">
+        <div class="column-header">
+          <h2>📋 To Do</h2>
+        </div>
+        <div id="todo" class="tasks-container"></div>
+      </div>
+
+      <div class="column" id="doneColumn">
+        <div class="column-header">
+          <h2>✅ Done</h2>
+        </div>
+        <div id="done" class="tasks-container"></div>
+        <br> <br>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
